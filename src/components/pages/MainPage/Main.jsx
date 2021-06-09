@@ -13,7 +13,7 @@ function Main({filterBar, menuIsOpen, onBurgerClick}) {
     const [dateTo, setDateTo] = useState('')
 
     
-    console.log(jogs, filteredJogs)
+    // console.log(jogs, filteredJogs)
     const filterFromTo = () => {
         console.log(Date.parse(dateFrom), Date.parse(dateTo))
         setFilteredJogs(jogs.filter(jog => jog.date > Date.parse(dateFrom) && jog.date < Date.parse(dateTo)))
