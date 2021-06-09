@@ -1,0 +1,59 @@
+$sm: 576px; $md:768px; $lg: 992px; $xl:1200px;
+$baby-purple: #e990f9;
+
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 116px)
+}
+
+.bear-face--wrap {
+    border-radius: 44px;
+    padding: 77px 0 34px 0;
+    width: 503px;
+    height: 379px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    button {
+        background: none;
+        border-radius: 36px;
+        border: 3px solid #fff;
+        font-size: 18px;
+        padding: 18px 34px;
+        max-width: 150px;
+        white-space: nowrap;
+    }
+}
+
+
+@media (max-width: $sm - 1px) {
+    .loginPage {
+        height: calc(100vh - 77px);
+    }
+    .bear-face--wrap {
+        background: transparent;
+        .bear-face svg path{
+            fill: $baby-purple;
+        }
+        button {
+            border-color: $baby-purple;
+            color: $baby-purple;
+        }
+    }
+}
+
+@media (min-width: $sm) {
+    .bear-face--wrap{
+        background: $baby-purple;
+        .bear-face svg path {
+            fill: #fff;
+        }
+        button {
+            border-color: #fff;
+            color: #fff;
+        }
+    }
+}

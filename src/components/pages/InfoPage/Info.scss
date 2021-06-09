@@ -1,0 +1,29 @@
+$appleGreen: rgb(126, 211, 33);
+
+@font-face {
+    font-family: 'regular';
+    src:    url('https://nomail.com.ua/files/eot/fb1989ed5196ff2a3ba6d267291e0075.eot?#iefix') format('embedded-opentype'),
+            url('https://nomail.com.ua/files/woff/fb1989ed5196ff2a3ba6d267291e0075.woff') format('woff'),
+            url('https://nomail.com.ua/files/woff2/fb1989ed5196ff2a3ba6d267291e0075.woff2') format('woff2');
+}
+
+.info {
+    padding: 25px;
+    max-width: 615px;
+    margin: 0 auto;
+    span {
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $appleGreen;
+    }
+    p {
+        font-family: "regular", sans-serif;
+        font-weight: normal;
+        margin-top: 2rem;
+        font-size: 13px;
+        line-height: 1.5rem;
+    }
+    p[id='1'] {
+        margin-top: 1rem;
+    }
+}

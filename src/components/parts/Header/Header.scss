@@ -1,0 +1,83 @@
+$appleGreen: rgb(126, 211, 33);
+$sm: 576px; $md:768px; $lg: 992px; $xl:1200px;
+
+header {
+    background-color: $appleGreen;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    nav {
+        a {
+            text-decoration: none;
+        }
+        ul, li {
+            list-style: none;
+            text-transform: uppercase;
+            color: white;
+            font-size: 14px;
+        }
+        ul {
+            display: flex;
+            width: 250px;
+            justify-content: space-between;
+        }
+    }
+}
+
+.burger {
+    display: none;
+}
+
+
+@media (max-width: $sm) {
+    header {
+        height: 77px;
+        .logo svg {
+            height: 37px;
+            width: 98px;
+        }
+    }
+    .burger {
+        display: flex;
+        margin-left: 2rem;
+    }
+    nav {
+        ul {
+        justify-content: flex-end !important;
+        width: 170px !important;
+        }
+    ul a{
+        display: none;
+    }
+    }
+}
+@media (min-width: $sm +1px) {
+    header {
+        background: rgb(126, 211, 33) !important;
+        .logo {
+            svg g {
+                fill: white !important;
+            }
+        }
+    }
+}
+
+@media (min-width: $sm) and (max-width: $lg) {
+    header {
+        height: 100px;
+        .logo svg {
+            height: 74px;
+        }
+    }
+}
+
+@media (min-width: $lg) {
+    header {
+        height: 116px;
+        .logo svg {
+            height: 80px;
+        }
+    }
+}

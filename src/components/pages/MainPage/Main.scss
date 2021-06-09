@@ -1,0 +1,228 @@
+$sm: 576px; $md:768px; $lg: 992px; $xl:1200px;
+$baby-purple: #e990f9;
+$appleGreen: rgb(126, 211, 33);
+
+@font-face {
+    font-family: 'regular';
+    src:    url('https://nomail.com.ua/files/eot/fb1989ed5196ff2a3ba6d267291e0075.eot?#iefix') format('embedded-opentype'),
+            url('https://nomail.com.ua/files/woff/fb1989ed5196ff2a3ba6d267291e0075.woff') format('woff'),
+            url('https://nomail.com.ua/files/woff2/fb1989ed5196ff2a3ba6d267291e0075.woff2') format('woff2');
+}
+
+.mainPage {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    height: calc(100vh - 77px);
+    a {
+        text-decoration: none;
+        color: rgb(54, 54, 54);
+        text-transform: uppercase;
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+    a:hover {
+        color:rgb(126, 211, 33);
+    }
+}
+
+.filter-bar {
+    height: 60px;
+    width: 100%;
+    background: rgb(234, 234, 234);
+    .container {
+        width: 380px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        label {
+            font-size: 13px;
+            margin-right: 5px;
+            color: rgb(151, 151, 151);
+            font-family: "regular", sans-serif;
+        }
+        input {
+            width: 100px;
+            height: 31px;
+            border-radius: 11px;
+            border: 1px solid rgb(151, 151, 151);
+            color: gray;
+        }
+    }
+}
+
+button.fixed {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+.jog-list-wrap {
+    min-height: 300px;
+    width: 100%;
+    .container {
+        height: 100%;
+        width: 380px;
+        margin: 0 auto;
+        .jog-list--element {
+            height: 188px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(215, 215, 215);
+            .jog-list--element-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+            }
+            .jog-list--element-info {
+                width: 50%;
+                p {
+                font-family: "regular", sans-serif;
+                color: rgb(151, 151, 151);
+                margin-bottom: 10px;
+                span {
+                    color: black;   
+                }
+                }
+            }
+        }
+    }
+}
+
+.sad-face--wrap {
+    border-radius: 44px;
+    padding: 77px 0 34px 0;
+    width: 503px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .sad-face {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    p {
+        margin-top: 47px;
+        color: #b0b0b0;
+        font-size: 24px;
+    }
+    button.outlined {
+        background: none;
+        border-radius: 36px;
+        border: 3px solid $baby-purple;
+        font-size: 18px;
+        padding: 18px 34px;
+        white-space: nowrap;
+        color: $baby-purple;
+    }
+}
+
+.add-jog--modal-wrap {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: absolute;
+    margin-top: 10rem;
+    width: 100%;
+}
+
+.add-jog--modal {
+    width: 509px;
+    height: 379px;
+    border-radius: 44px;
+    background: $appleGreen;
+    margin: auto 1rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 101px;
+    button:last-child {
+        border: 3px solid white;
+        color: #fff;
+        border-radius: 25px;
+        width: 320px;
+        max-width: 320px;
+        min-width: 250px;
+        height: 42px;
+        margin: 0 auto;
+        margin-top: 24px;
+    }
+    }
+    div {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        label {
+            width: 90px;
+        }
+        input {
+            border: 1px solid #979797;
+            border-radius: 7px;
+            height: 31px;
+            width: 236px;
+        }
+    }
+    
+}
+
+@media (max-width: $sm) {
+    .menu {
+        display: flex !important;
+    }
+    button.fixed {
+        right: 30px !important;
+        bottom: 30px !important;
+    }
+    .add-jog--modal button:last-child {
+        width: 90% !important;
+    }
+    .add-jog--modal div input {
+        width: 180px;
+    }
+    .jog-list-wrap .container {
+        width: 100%;
+    }
+    .filter-bar {
+        .container {
+            width: 100%;
+            white-space: nowrap;
+            padding: 0 5vw;
+            input {
+                width: 72px;
+            }
+        }
+    }
+}
+
+@media (min-width: $sm + 1px) {
+    .jog-list--element {
+        border-bottom: none !important;
+    }
+    .mainPage {
+        display: flex !important;
+    }
+}
