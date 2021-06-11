@@ -12,4 +12,4 @@ const Putter = () =>
 const Deleter = () =>
   axios.delete(`https://jogtracker.herokuapp.com/api/v1/test/echo`).then((res) => res.data.timestamp);
 
-export {Getter, Poster, Putter, Delitter};
+export {Getter, Poster, Putter, Deleter};
