@@ -1,4 +1,4 @@
-import {Getter, Poster, Putter, Delitter} from "./Getter";
+import {Getter, Poster, Putter, Deleter} from "./Getter";
 
 describe("Getter", () => {
   test("should return the number greater than this one", async () => {
@@ -27,9 +27,9 @@ describe("Putter", () => {
   });
 });
 
-describe("Delitter", () => {
+describe("Deleter", () => {
   test("should return the number greater than this one", async () => {
-    const result = await Delitter();
+    const result = await Deleter();
     // I've added this for troubleshooting
     console.log(result);
     expect(result).toBeGreaterThan(1623280800);
